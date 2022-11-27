@@ -8,7 +8,7 @@ pipeline {
         }
         stage('docker build and push') { 
             steps {
-                sh 'cd upgrad_final_project && ls'
+                sh 'ls'
             }
         }
     }
