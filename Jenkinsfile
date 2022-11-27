@@ -8,7 +8,7 @@ pipeline {
         }
         stage('docker build and push') { 
             steps {
-                sh 'ls'
+                sh 'cd test-nodeapp-1-task-2 && ls'
             }
         }
     }
