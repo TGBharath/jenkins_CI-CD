@@ -15,7 +15,7 @@ pipeline {
         }
         stage('docker deploy') { 
             steps {
-                sh 'cd /home/ubuntu/ansible && ls -lrt'
+                sh 'cd /home/ubuntu/ansible && ssh -t -t -R -o StrictHostKeyChecking=no -i ubuntukey.pem ubuntu@10.0.1.198'
             }
         }
     }
