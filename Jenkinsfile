@@ -15,8 +15,7 @@ pipeline {
         }
         stage('docker deploy') { 
             steps {
-                sh 'cd /home/ubuntu/ansible'
-                sh 'ls'
+                sh 'cd /home/ubuntu/ansible && ls'
             }
         }
     }
