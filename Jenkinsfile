@@ -15,7 +15,8 @@ pipeline {
         }
         stage('docker deploy') { 
             steps {
-                sh 'ls'
+                sh 'cd /home/ubuntu/ansible && ssh -o StrictHostKeyChecking=no -i ubuntukey.pem ubuntu@10.0.1.198'
+                sh 'docker pull 130826749738.dkr.ecr.us-east-1.amazonaws.com/node:v${BUILD_NUMBER} && docker run -itd -p 5000:8081 docker rmi 130826749738.dkr.ecr.us-east-1.amazonaws.com/node:v${BUILD_NUMBER}'
             }
         }
     }
